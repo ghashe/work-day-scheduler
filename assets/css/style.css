@@ -3,7 +3,29 @@ body {
     font-size: 16px;
     line-height: 1;
   }
+
+.shift_container{
+    margin: 10px 20px;
+    height: calc(100% - 50px);
+    border-radius: 12px;
+    border: 2px solid gray; 
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
   
+  #first_shift {
+    background: rgb(60, 114, 233);
+  }
+  
+  #second_shift {
+    color: #000000;
+    background: rgb(226, 208, 42);
+  }
+
+  #third_shift{
+    background: rgb(20, 20, 20);
+  }
+
   textarea{
     background: transparent;
     border: none;
@@ -33,7 +55,8 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;;
+    border-top: 1px solid white;
+    padding: 10px;
   }
   
   .hour {
