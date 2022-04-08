@@ -166,4 +166,13 @@ function changeBackgroundColor() {
 $(document).ready(function () {
   initPage();
   changeBackgroundColor();
+
+  // When a user clicks the save button, the input is stored to the local storage
+  $(".saveBtn").on("click", function () {
+    userInput = $(this).siblings(".form-control").val().trim();
+    console.log(userInput);
+    hourSpan = $(this).siblings(".input-group-prepend").text().trim();
+    console.log(hourSpan);
+    localStorage.setItem(hourSpan, JSON.stringify(userInput));
+  });
 });
