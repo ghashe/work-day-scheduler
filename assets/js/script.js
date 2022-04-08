@@ -6,37 +6,41 @@ var presentHour = moment().format("h:mm:ss a");
 // Assigning variables for each our
 
 // First shift
-firstShift9 = $("#first_shift_9");
-firstShift10 = $("#first_shift_10");
-firstShift11 = $("#first_shift_11");
-firstShift12 = $("#first_shift_12");
-firstShift1 = $("#first_shift_1");
-firstShift2 = $("#first_shift_2");
-firstShift3 = $("#first_shift_3");
-firstShift4 = $("#first_shift_4");
-firstShift5 = $("#first_shift_5");
+var firstShift9 = $("#9_first_shift_9AM");
+var firstShift10 = $("#10_first_shift_10AM");
+var firstShift11 = $("#11_first_shift_11AM");
+var firstShift12 = $("#12_first_shift_12PM");
+var firstShift1 = $("#13_first_shift_1PM");
+var firstShift2 = $("#14_first_shift_2PM");
+var firstShift3 = $("#15_first_shift_3PM");
+var firstShift4 = $("#16_first_shift_4PM");
+var firstShift5 = $("#17_first_shift_5PM");
 
 // Second shift
-secondShift5 = $("#second_shift_5");
-secondShift6 = $("#second_shift_6");
-secondShift7 = $("#second_shift_7");
-secondShift8 = $("#second_shift_8");
-secondShift9 = $("#second_shift_9");
-secondShift10 = $("#second_shift_10");
-secondShift11 = $("#second_shift_11");
-secondShift12 = $("#second_shift_12");
-secondShift1 = $("#second_shift_1");
+var secondShift5 = $("#17_second_shift_5PM");
+var secondShift6 = $("#18_second_shift_6PM");
+var secondShift7 = $("#19_second_shift_7PM");
+var secondShift8 = $("#20_second_shift_8PM");
+var secondShift9 = $("#21_second_shift_9PM");
+var secondShift10 = $("#22_second_shift_10PM");
+var secondShift11 = $("#23_second_shift_11PM");
+var secondShift12 = $("#24_second_shift_12AM");
+var secondShift1 = $("#1_second_shift_1AM");
 
 // Third shift
-thirdShift12 = $("#third_ shift_12");
-thirdShift1 = $("#third_shift_1");
-thirdShift2 = $("#third_shift_2");
-thirdShift3 = $("#third_shift_3");
-thirdShift4 = $("#third_shift_4");
-thirdShift5 = $("#third_shift_5");
-thirdShift6 = $("#third_shift_6");
-thirdShift7 = $("#third_shift_7");
-thirdShift8 = $("#third_shift_8");
+var thirdShift12 = $("#24_third_ shift_12AM");
+var thirdShift1 = $("#1_third_shift_1AM");
+var thirdShift2 = $("#2_third_shift_2AM");
+var thirdShift3 = $("#3_third_shift_3AM");
+var thirdShift4 = $("#4_third_shift_4AM");
+var thirdShift5 = $("#5_third_shift_5AM");
+var thirdShift6 = $("#6_third_shift_6AM");
+var thirdShift7 = $("#8_third_shift_7AM");
+var thirdShift8 = $("#8_third_shift_8AM");
+
+var hour = moment().hours();
+var userInput;
+var hourSpan;
 
 // The date and the time
 var interval = setInterval(function () {
@@ -143,16 +147,15 @@ function initPage() {
 
 function changeBackgroundColor() {
   $(".form-control").each(function () {
-    for (let i = 0; i <= military_time.length; i++) {
-      hour_of_the_row = military_time[i]++;
-    }
+    var checkTime = parseInt($(this).attr("id"));
     hour = parseInt(hour);
-    console.log(hour_of_the_row);
+    console.log(checkTime);
     console.log(hour);
 
-    if (hour > hour_of_the_row) {
-      $(this).addClass("future");
-    } else if (hour < hour_of_the_row) {
+    // Compare each hour of the day to the current hour to determine if it is past, present, or future.
+    if (hour > checkTime) {
+      $(this).addClass("past");
+    } else if (hour < checkTime) {
       $(this).addClass("future");
     } else {
       $(this).addClass("present");
