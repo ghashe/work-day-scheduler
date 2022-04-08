@@ -44,7 +44,7 @@ var interval = setInterval(function () {
   $("#currentDay").html(
     thisHour.format("YYYY MMMM DD") +
       " " +
-      thisHour.format("addd").substring(0, 3).toUpperCase()
+      thisHour.format("dddd").substring(0, 3).toUpperCase()
   );
   $("#currentDay").html(currentDate + " " + thisHour.format("hh:mm:ss A"));
 }, 100);
@@ -139,8 +139,28 @@ function initPage() {
   thirdShift8.val(initThirdShift8);
 }
 
-// This makes it possible to change the background color by iterating through the array of military time values and comparing them to the current hour
-let military_time = [
-  9, 10, 11, 12, 13, 14, 15, 16, 17, 17, 18, 19, 20, 21, 22, 23, 24, 1, 24, 1,
-  2, 3, 4, 5, 6, 7, 8,
-];
+// Defining a function that is used to determine whether a task is past, present, or future compared to the current hour by changing the color of the dialog box where the task is entered.
+
+function changeBackgroundColor() {
+  $(".form-control").each(function () {
+    for (let i = 0; i <= military_time.length; i++) {
+      hour_of_the_row = military_time[i]++;
+    }
+    hour = parseInt(hour);
+    console.log(hour_of_the_row);
+    console.log(hour);
+
+    if (hour > hour_of_the_row) {
+      $(this).addClass("future");
+    } else if (hour < hour_of_the_row) {
+      $(this).addClass("future");
+    } else {
+      $(this).addClass("present");
+    }
+  });
+}
+
+$(document).ready(function () {
+  initPage();
+  changeBackgroundColor();
+});
