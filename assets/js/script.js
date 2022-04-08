@@ -175,4 +175,10 @@ $(document).ready(function () {
     console.log(hourSpan);
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
   });
+
+  // A button that clears a user's entire day's task when clicked.
+  $("#clearDay").on("click", function () {
+    localStorage.clear();
+    initPage();
+  });
 });
