@@ -32,7 +32,6 @@ body {
   }
 
   textarea{
-
     border: none;
     resize: none;
     color: #000000;
@@ -40,6 +39,11 @@ body {
     padding: 10px;
   }
   
+  textarea.form-control{
+    color:blue;
+    font-size: 1.4em;
+  }
+
   .jumbotron {
     text-align: center;
     color: black;
