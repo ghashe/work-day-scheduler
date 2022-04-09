@@ -4,8 +4,12 @@ body {
     line-height: 1;
   }
 
+  header{
+    background: rgb(96, 205, 241);
+  }
+
 .shift_container{
-    margin: 10px 20px;
+    margin: 30px 5%;
     height: calc(100% - 50px);
     border-radius: 12px;
     border: 2px solid gray; 
@@ -28,7 +32,7 @@ body {
   }
 
   textarea{
-    background: transparent;
+
     border: none;
     resize: none;
     color: #000000;
@@ -38,7 +42,6 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
@@ -82,10 +85,10 @@ body {
   }
   
   .saveBtn {
-     position: relative;
+    position: relative;
     display:block;
     height: 57px; 
-     width: 130px;
+    width: 130px;
     margin: 0px 4px;
     padding: 2px 2px;
     font-weight: 600; 
@@ -143,6 +146,3 @@ body {
     left:100%;
     opacity:0;
   }
-  
-
-  
