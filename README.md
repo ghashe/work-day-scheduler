@@ -41,7 +41,7 @@ A very simple and user friendly Calendar Application that allows users to schedu
     • THEN the saved events persist
 
 ## Visuals:
-![](assets/images/A%20single-workday%20planner%20.jpeg)
+![](assets/images/a_single_workday_planner.png)
 
 ## Build
 
