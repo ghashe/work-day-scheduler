@@ -42,9 +42,7 @@ A very simple and user friendly Calendar Application that allows users to schedu
 
 ## Visuals:
 
-    | ![A single-workday planner .jpeg](https://user-images.githubusercontent.com/52675141/162554751-9ac9e200-c2d2-4483-9b0d-dd00cfacd7f5.jpeg) |
-    |:--:|
-    | *Space* |
+  ![](images/A single-workday planner%20.jpeg)
 
 ## Build
 
