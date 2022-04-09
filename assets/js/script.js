@@ -24,18 +24,18 @@ var secondShift8 = $("#20_second_shift_8PM");
 var secondShift9 = $("#21_second_shift_9PM");
 var secondShift10 = $("#22_second_shift_10PM");
 var secondShift11 = $("#23_second_shift_11PM");
-var secondShift12 = $("#24_second_shift_12AM");
+var secondShift12 = $("#0_second_shift_12AM");
 var secondShift1 = $("#1_second_shift_1AM");
 
 // Third shift
-var thirdShift12 = $("#24_third_ shift_12AM");
+var thirdShift12 = $("#0_third_shift_12AM");
 var thirdShift1 = $("#1_third_shift_1AM");
 var thirdShift2 = $("#2_third_shift_2AM");
 var thirdShift3 = $("#3_third_shift_3AM");
 var thirdShift4 = $("#4_third_shift_4AM");
 var thirdShift5 = $("#5_third_shift_5AM");
 var thirdShift6 = $("#6_third_shift_6AM");
-var thirdShift7 = $("#8_third_shift_7AM");
+var thirdShift7 = $("#7_third_shift_7AM");
 var thirdShift8 = $("#8_third_shift_8AM");
 
 var hour = moment().hours();
@@ -57,19 +57,19 @@ function initPage() {
   console.log("The time is " + hour);
 
   // First shift init
-  var initFirstShift9 = JSON.parse(localStorage.getItem("09:00 am"));
+  var initFirstShift9 = JSON.parse(localStorage.getItem("09:00 AM"));
   firstShift9.val(initFirstShift9);
 
-  var initFirstShift10 = JSON.parse(localStorage.getItem("10:00 am"));
+  var initFirstShift10 = JSON.parse(localStorage.getItem("10:00 AM"));
   firstShift10.val(initFirstShift10);
 
-  var initFirstShift11 = JSON.parse(localStorage.getItem("11:00 am"));
+  var initFirstShift11 = JSON.parse(localStorage.getItem("11:00 AM"));
   firstShift11.val(initFirstShift11);
 
   var initFirstShift12 = JSON.parse(localStorage.getItem("12:00 PM"));
   firstShift12.val(initFirstShift12);
 
-  var initFirstShift1 = JSON.parse(localStorage.getItem("12:00 PM"));
+  var initFirstShift1 = JSON.parse(localStorage.getItem("01:00 PM"));
   firstShift1.val(initFirstShift1);
 
   var initFirstShift2 = JSON.parse(localStorage.getItem("02:00 PM"));
@@ -86,31 +86,31 @@ function initPage() {
 
   // Second shift init
 
-  var initSecondShift5 = JSON.parse(localStorage.getItem("05:00 PM"));
+  var initSecondShift5 = JSON.parse(localStorage.getItem("05:00 pm"));
   secondShift5.val(initSecondShift5);
 
-  var initSecondShift6 = JSON.parse(localStorage.getItem("06:00 PM"));
+  var initSecondShift6 = JSON.parse(localStorage.getItem("06:00 pm"));
   secondShift6.val(initSecondShift6);
 
-  var initSecondShift7 = JSON.parse(localStorage.getItem("07:00 PM"));
+  var initSecondShift7 = JSON.parse(localStorage.getItem("07:00 pm"));
   secondShift7.val(initSecondShift7);
 
-  var initSecondShift8 = JSON.parse(localStorage.getItem("08:00 PM"));
+  var initSecondShift8 = JSON.parse(localStorage.getItem("08:00 pm"));
   secondShift8.val(initSecondShift8);
 
-  var initSecondShift9 = JSON.parse(localStorage.getItem("09:00 PM"));
+  var initSecondShift9 = JSON.parse(localStorage.getItem("09:00 pm"));
   secondShift9.val(initSecondShift9);
 
-  var initSecondShift10 = JSON.parse(localStorage.getItem("10:00 PM"));
+  var initSecondShift10 = JSON.parse(localStorage.getItem("10:00 pm"));
   secondShift10.val(initSecondShift10);
 
-  var initSecondShift11 = JSON.parse(localStorage.getItem("11:00 PM"));
+  var initSecondShift11 = JSON.parse(localStorage.getItem("11:00 pm"));
   secondShift11.val(initSecondShift11);
 
-  var initSecondShift12 = JSON.parse(localStorage.getItem("12:00 PM"));
+  var initSecondShift12 = JSON.parse(localStorage.getItem("12:00 am"));
   secondShift12.val(initSecondShift12);
 
-  var initSecondShift1 = JSON.parse(localStorage.getItem("01:00 PM"));
+  var initSecondShift1 = JSON.parse(localStorage.getItem("01:00 am"));
   secondShift1.val(initSecondShift1);
 
   // Third shift init
@@ -148,12 +148,14 @@ function initPage() {
 function changeBackgroundColor() {
   $(".form-control").each(function () {
     var checkTime = parseInt($(this).attr("id"));
-    hour = parseInt(hour);
+    hour = parseFloat(hour);
     console.log(checkTime);
-    console.log(hour);
+    // console.log(hour);
 
     // Compare each hour of the day to the current hour to determine if it is past, present, or future.
-    if (hour > checkTime) {
+    if (hour + 24 == checkTime) {
+      $(this).addClass("present");
+    } else if (hour > checkTime) {
       $(this).addClass("past");
     } else if (hour < checkTime) {
       $(this).addClass("future");
