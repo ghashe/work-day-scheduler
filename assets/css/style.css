@@ -41,7 +41,7 @@ body {
   
   textarea.form-control{
     color:blue;
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
 
   .jumbotron {
@@ -91,7 +91,7 @@ body {
   .saveBtn {
     position: relative;
     display:block;
-    height: 57px; 
+    height: 67px; 
     width: 130px;
     margin: 0px 4px;
     padding: 2px 2px;
