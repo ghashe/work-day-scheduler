@@ -42,8 +42,6 @@ A very simple and user friendly Calendar Application that allows users to schedu
 
 ## Visuals:
 
-  ![](images/A single-workday planner%20.jpeg)
-
 ## Build
 
 Semantic tags have been used in HTML to create accessible content.
