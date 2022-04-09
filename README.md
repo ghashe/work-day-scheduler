@@ -2,12 +2,17 @@
 
 Single-day planner that saves text inputs and also color codes by the hour depending on whether the planner events are in the past, present, or future, as indicated by grey, red, and green.
 
-## Contents 1. About
+## Contents
 
-i. User Story
-ii. Acceptance criteria
-iii. Visuals
-iv. Build 2. Setup 3. Credits 4. License 5. Contributing
+    1. About
+        i. User Story
+        ii. Acceptance criteria
+        iii. Visuals
+        iv. Build
+    2. Setup
+    3. Credits
+    4. License
+    5. Contributing
 
 ## About
 
@@ -37,8 +42,9 @@ A very simple and user friendly Calendar Application that allows users to schedu
 
 ## Visuals:
 
-    https://user-images.githubusercontent.com/52675141/162554751-9ac9e200-c2d2-4483-9b0d-dd00cfacd7f5.jpeg
-    https://github.com/ghashe/work-day-scheduler/issues/2
+    | ![A single-workday planner .jpeg](https://user-images.githubusercontent.com/52675141/162554751-9ac9e200-c2d2-4483-9b0d-dd00cfacd7f5.jpeg) |
+    |:--:|
+    | *Space* |
 
 ## Build
 
