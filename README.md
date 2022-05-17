@@ -1,18 +1,20 @@
-# Work Day Scheduler Starter Code
+# Work Day Scheduler
+
+![Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
 Single-day planner that saves text inputs and also color codes by the hour depending on whether the planner events are in the past, present, or future, as indicated by grey, red, and green.
 
-## Contents
+## Table of Content
 
-    1. About
-        i. User Story
-        ii. Acceptance criteria
-        iii. Visuals
-        iv. Build
-    2. Setup
-    3. Credits
-    4. License
-    5. Contributing
+- [About](#about)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Visual](#visual)
+- [Build](#build)
+- [Setup](#setup)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contributing)
 
 ## About
 
@@ -40,7 +42,8 @@ A very simple and user friendly Calendar Application that allows users to schedu
     • WHEN I refresh the page
     • THEN the saved events persist
 
-## Visuals:
+## Visual:
+
 ![](assets/images/a_single_workday_planner.png)
 
 ## Build
@@ -56,8 +59,11 @@ The following tools are used to build the application
 
 ## Setup
 
-    Use the following link to clone the repo:
+    Using the following link, you can clone the most recent version of repo into your machine:
     https://github.com/ghashe/work-day-scheduler.git
+
+    Use the following link to open the app in your browser:
+    https://ghashe.github.io/work-day-scheduler/
 
 ## Credits
 
